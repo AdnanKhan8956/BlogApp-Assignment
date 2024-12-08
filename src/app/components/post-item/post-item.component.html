@@ -1,0 +1,11 @@
+<div class="card mb-3">
+    <div class="card-body">
+      <p class="card-text">{{ post.text }}</p>
+      <p class="text-muted mb-3">Created by: {{ post.username }} | Date: {{ post.dateCreated | date }}</p>
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-secondary me-2" (click)="edit.emit(post)">Edit</button>
+        <button class="btn btn-danger" (click)="delete.emit(post.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+  
